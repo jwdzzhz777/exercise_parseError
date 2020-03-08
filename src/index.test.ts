@@ -1,4 +1,4 @@
-import {parseError} from '../src';
+import { parseError } from '../src'
 
 const result = {
     message: 'Error raised',
@@ -19,7 +19,7 @@ const result = {
             filename: 'http://192.168.31.8:8000/a.js'
         }
     ]
-};
+}
 
 test('parseError chrome', () => {
     const err = {
@@ -32,9 +32,9 @@ test('parseError chrome', () => {
             at <anonymous>:1:11
             at http://192.168.31.8:8000/a.js:22:3
         `
-    };
-    expect(parseError(err)).toEqual(result);
-});
+    }
+    expect(parseError(err)).toEqual(result)
+})
 
 test('parseError Firefox', () => {
     const err = {
@@ -47,9 +47,9 @@ test('parseError Firefox', () => {
             <anonymous>:1:11
             http://192.168.31.8:8000/a.js:22:3
         `
-    };
-    expect(parseError(err)).toEqual(result);
-});
+    }
+    expect(parseError(err)).toEqual(result)
+})
 
 test('parseError ignore', () => {
     const err = {
@@ -62,9 +62,9 @@ test('parseError ignore', () => {
             @http://192.168.31.8:8000/a.js:4:3
             bar http://192.168.31.8:8000/c.js:2:9
         `
-    };
+    }
     expect(parseError(err)).toEqual({
         message: 'Error raised',
         stack: []
-    });
-});
+    })
+})
