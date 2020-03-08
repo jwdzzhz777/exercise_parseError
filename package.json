@@ -1,0 +1,30 @@
+{
+  "name": "@leetcode-hire/foundations-zh",
+  "version": "1.0.0",
+  "description": "Frontend foundation problem for leetcode-cn.com",
+  "main": "lib/index.js",
+  "repository": "https://github.com/LeetCode-OpenSource/hire",
+  "author": "lynweklm@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "shx rm -rf lib && tsc -p tsconfig.json --outDir lib",
+    "lint": "eslint src/index.ts",
+    "test": "jest src/index.test.ts"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "shx": "^0.3.2",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.6.2"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
+  }
+}
